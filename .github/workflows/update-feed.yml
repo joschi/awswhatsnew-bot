@@ -28,11 +28,11 @@ jobs:
           status-visibility: unlisted
           dry-run: false
           template: |
-            {{item.title}}
+            {{{item.title}}}
 
-            {{item.link}}
+            {{{item.link}}}
 
-            {{item.description}}
+            {{{item.description}}}
           api-endpoint: https://botsin.space/
           api-token: ${{ secrets.MASTODON_ACCESS_TOKEN }}
           cache-file: ${{ github.workspace }}/mastofeedbot/cache.json
