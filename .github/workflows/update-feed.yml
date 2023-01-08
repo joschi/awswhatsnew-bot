@@ -33,7 +33,7 @@ jobs:
             {{{item.link}}}
 
             {{{item.description}}}
-          api-endpoint: https://botsin.space/
+          api-endpoint: https://awscommunity.social/
           api-token: ${{ secrets.MASTODON_ACCESS_TOKEN }}
           cache-file: ${{ github.workspace }}/mastofeedbot/cache.json
           cache-limit: 1000
