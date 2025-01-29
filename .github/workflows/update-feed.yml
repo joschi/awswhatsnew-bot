@@ -20,7 +20,7 @@ jobs:
           path: ${{ github.workspace }}/mastofeedbot
           key: feed-cache-${{ steps.generate-key.outputs.cache-key }}
           restore-keys: feed-cache-
-      - name: GitHub
+      - name: Post to awscommunity.social
         uses: 'joschi/mastofeedbot@v0.1.7'
         with:
           rss-feed: 'https://aws.amazon.com/about-aws/whats-new/recent/feed/'
@@ -36,21 +36,4 @@ jobs:
           api-endpoint: https://awscommunity.social/
           api-token: ${{ secrets.MASTODON_ACCESS_TOKEN }}
           cache-file: ${{ github.workspace }}/mastofeedbot/cache.json
-          cache-limit: 1000
-      - name: Post to mas.to
-        uses: 'joschi/mastofeedbot@v0.1.7'
-        with:
-          rss-feed: 'https://aws.amazon.com/about-aws/whats-new/recent/feed/'
-          # Visibility of the posted status (public | unlisted | private | direct)
-          status-visibility: unlisted
-          dry-run: false
-          template: |
-            {{{item.title}}}
-
-            {{{item.link}}}
-
-            {{{item.description}}}
-          api-endpoint: https://mas.to/
-          api-token: ${{ secrets.MASTO_ACCESS_TOKEN }}
-          cache-file: ${{ github.workspace }}/mastofeedbot/masto.json
           cache-limit: 1000
