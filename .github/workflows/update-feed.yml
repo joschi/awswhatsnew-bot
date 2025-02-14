@@ -21,7 +21,6 @@ jobs:
           key: mastodon-feed-cache-${{ steps.generate-key.outputs.cache-key }}
           restore-keys: |
             mastodon-feed-cache-
-            feed-cache-
       - name: Post to awscommunity.social
         uses: 'joschi/mastofeedbot@v0.2.0'
         with:
@@ -55,7 +54,6 @@ jobs:
           path: ${{ github.workspace }}/blueskyfeedbot
           key: bluesky-feed-cache-${{ steps.generate-key.outputs.cache-key }}
           restore-keys: |
-            feed-cache-
             bluesky-feed-cache-
       - name: Post to awswhatsnew.bsky.social
         uses: 'joschi/blueskyfeedbot@v0.0.3'
