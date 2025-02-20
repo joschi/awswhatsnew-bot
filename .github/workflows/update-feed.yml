@@ -56,7 +56,7 @@ jobs:
           restore-keys: |
             bluesky-feed-cache-
       - name: Post to awswhatsnew.bsky.social
-        uses: 'joschi/blueskyfeedbot@v0.0.3'
+        uses: 'joschi/blueskyfeedbot@v0.0.4'
         with:
           rss-feed: 'https://aws.amazon.com/about-aws/whats-new/recent/feed/'
           dry-run: false
