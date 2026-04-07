@@ -22,7 +22,7 @@ jobs:
           restore-keys: |
             mstdn.party-feed-cache-
       - name: Post to mstdn.party
-        uses: 'joschi/mastofeedbot@v0.4.0'
+        uses: 'joschi/mastofeedbot@v0.5.0'
         with:
           rss-feed: 'https://aws.amazon.com/about-aws/whats-new/recent/feed/'
           # Visibility of the posted status (public | unlisted | private | direct)
