@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
 jobs:
   rss-to-mstdn-party:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-slim
     steps:
       - name: Generate cache key
         uses: actions/github-script@v9
@@ -40,7 +40,7 @@ jobs:
           cache-limit: 1000
           initial-post-limit: 10
   rss-to-bluesky:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-slim
     steps:
       - name: Generate cache key
         uses: actions/github-script@v9
